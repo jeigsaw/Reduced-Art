@@ -1,0 +1,679 @@
+/* Icofont init */
+@font-face {
+  font-family: 'icofont';
+  src:
+    url('../fonts/I-cofont.ttf?icewrf') format('truetype'),
+    url('../fonts/I-cofont.woff?icewrf') format('woff'),
+    url('../fonts/I-cofont.svg?icewrf#I-cofont') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* Global styles */
+html, body{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    font-family: 'Josefin Slab', serif;
+}
+
+body{
+    position: relative;
+}
+
+a:hover, a:focus, a:visited{
+    text-decoration: none;
+}
+
+/* --------------------------------------------------- */
+/*                Home section styling                 */
+/* ----------------------------------------------------*/
+section#home {
+    position: relative;
+    width: 100%;
+    padding: 0px;
+    box-shadow: 0px -0.5px 7px #808080;
+    -webkit-box-shadow: 0px -0.5px 7px #808080;
+    -ms-box-shadow: 0px -0.5px 7px #808080;
+    -o-box-shadow: 0px -0.5px 7px #808080;
+    -moz-box-shadow: 0px -0.5px 7px #808080;
+}
+
+div#pageLogo {
+    width: 65%;
+    max-width: 300px;
+    vertical-align: middle;
+    -webkit-vertical-align: middle;
+    -moz-vertical-align: middle;
+    -o-vertical-align: middle;
+    -ms-vertical-align: middle;
+    margin: 0 auto; 
+} 
+
+div#pageLogo img{
+    animation-delay: 0.2s;
+    -webkit-animation-delay: 0.2s;
+    -moz-animation-delay: 0.2s;
+    -o-animation-delay: 0.2s;
+    -ms-animation-delay: 0.2s;
+}
+
+
+/* --------------------------------------------------- */
+/*               Landing section styling               */
+/* ----------------------------------------------------*/
+section#landSection {
+    margin: 0;
+    min-height: 465px;
+    background: url(../img/landin.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 25px 25px 0px 25px;
+}
+#banTitle {
+    animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+}
+#banNav{
+    animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    -ms-animation-delay: 1.3s;
+}
+#landSection #banTitle {
+    text-align: right;
+}
+
+#banTitle h3 {
+    padding-top: 2.3em;
+    margin: 53px 0 0px 0;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 4.5em;
+    font-weight: 100;
+    color: white;
+    text-shadow: 0px 1px 15px #000;
+    -webkit-text-shadow: 0px 1px 15px #000;
+    -moz-text-shadow: 0px 1px 15px #000;
+    -o-text-shadow: 0px 1px 15px #000;
+    -ms-text-shadow: 0px 1px 15px #000;
+}
+/* media query for the banner heading */
+@media only screen and (max-width: 515px) {
+    #banTitle h3 {
+        font-size: 3.5em;
+        padding-top: 3em;
+    }
+}
+
+#banTitle p{
+    font-family: serif;
+    color: #006400;
+}
+
+/* Navigation from banner image */
+#banNav ul{
+    list-style: none;
+    margin-top: 7.5em;
+    width: 100%;
+    min-height: 200px;
+    padding: 25px 0 15px 20px;
+    background: rgba(255,255,255,0.2);
+    font-family: 'Garamond', 'EB Garamond', serif;
+    font-size: 1.7em;
+    line-height: 2em
+}
+
+#banNav ul li a{
+        color: #008000;
+}
+
+#banNav ul li a:hover{
+    text-decoration: underline;
+}
+
+/* remove the banner nav if screen width is less than 768px */
+@media only screen and (max-width: 768px) {
+    #banTitle p, #banNav ul{
+        display: none;
+    }
+}
+
+/* --------------------------------------------------- */
+/*                Navigation section styling           */
+/* ----------------------------------------------------*/
+nav.navbar{
+    margin-bottom: 0;
+    padding: 0 10px;
+    background: url(../img/navv.jpg) no-repeat center center;
+    background-size: cover;
+    border: 0px solid #000;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    -o-border-radius: 0px;
+}
+
+.navbar ul{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+.navbar ul li{
+    list-style: none;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.navbar ul li a{
+    font-family: serif;
+    font-size: 1.4em;
+    display: block;
+    padding: 0.6em 0;
+    color: #ff8c00;
+}
+
+.navbar ul li a:hover{
+    text-decoration: none;
+    background: rgba( 255, 201, 70, 0.6);
+    color: #b57905;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+/* active nav */
+.navbar ul li.active>a {
+    color: #b57905;
+}
+.navbar ul li.active>a:hover {
+    background: none;
+    cursor: default;
+}
+
+/* arrow for the home nav */
+.navbar ul li a[href="#home"]{
+    position: relative;
+}
+.navbar ul li a[href="#home"]:before{
+    content: "";
+    position: absolute;
+    border: 9px solid transparent;
+    border-bottom: 9px solid rgba(255,255,255,0.9);
+    top: -0.9em;
+}
+
+/* --------------------------------------------------- */
+/*                About section styling                */
+/* ----------------------------------------------------*/
+section#about #mainDis {
+    background: url(../img/aboutBk.jpg) no-repeat center center;
+    background-size: cover;
+    padding: 25px;
+    text-align: center;
+    border-bottom: 10px solid white;
+    box-shadow: 1px 2px 7px #939393;
+    -webkit-box-shadow: 1px 2px 7px #939393;
+    -moz-box-shadow: 1px 2px 7px #939393;
+    -ms-box-shadow: 1px 2px 7px #939393;
+    -o-box-shadow: 1px 2px 7px #939393;
+}
+
+section#about #mainDis h4 {
+    color: #bd0000;
+    font-weight: 600;
+    font-size: 2.8em;
+    font-variant: small-caps;
+} 
+section#about #mainDis h4 span {
+    color: #157d00;
+}
+
+#mainDis p{
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+/* give more breathing space for the text when screen is larger */
+@media only screen and (min-width:832px){
+    section#about #mainDis{
+        min-height: 290px;
+        padding-top: 50px;
+    }
+    
+    #mainDis p {
+        padding: 0 75px;
+        font-size: 1.4em;
+        line-height: 1.9em;
+    }
+}
+
+/* behind the scenes styling */
+section#about #behindScence {
+    padding: 15px;
+}
+
+#behindScence h1{
+    text-align: center;
+    margin-bottom: 25px;
+    font-family: 'Rubik One',sans-serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #5eb946;
+    text-decoration: underline;
+}
+
+#behindScence figure {
+    background: url(../img/picCover.jpg) no-repeat center bottom;
+    background-size: contain;
+}
+#behindScence figure img.img-responsive{
+    width: 20%;
+    min-width: 150px;
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -wekit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -ms-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+/* place a shadow effect in the picture */
+.imgShdw  {
+    position: relative;
+}
+.imgShdw:before, .imgShdw:after {
+   z-index: -1;
+   position: absolute;
+   content: "";
+   bottom: 15px;
+   left: 10px;
+   width: 50%;
+   top: 80%;
+   max-width:300px;
+   background: a9a7a7;
+   -webkit-box-shadow: 0 15px 10px #a9a7a7;
+   -moz-box-shadow: 0 15px 10px #a9a7a7;
+   box-shadow: 0 15px 10px #a9a7a7;
+   -webkit-transform: rotate(-3deg);
+   -moz-transform: rotate(-3deg);
+   -o-transform: rotate(-3deg);
+   -ms-transform: rotate(-3deg);
+   transform: rotate(-3deg);
+}
+.imgShdw:after {
+   -webkit-transform: rotate(3deg);
+   -moz-transform: rotate(3deg);
+   -o-transform: rotate(3deg);
+   -ms-transform: rotate(3deg);
+   transform: rotate(3deg);
+   -webkit-transform: rotate(3deg);
+   -moz-transform: rotate(3deg);
+   -ms-transform: rotate(3deg);
+   -o-transform: rotate(3deg);
+   right: 10px;
+   left: auto;
+}
+
+@media only screen and (min-width:570px){
+    .imgShdw:before, .imgShdw:after{
+      width: 20%;
+    }
+}
+
+
+/* text in the behind the scene */
+#behindScence h3 {
+    font-family: serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.2em;
+    color: #a59aeb;
+}
+
+#behindScence h4 {
+    margin-top: -10px;
+    text-align: center;
+    color: #545454;
+}
+
+#behindScence p{
+    line-height: 1.7em;
+    text-align: justify;
+    color: #39806e;
+}
+/* large text while the screen size is larger */
+@media only screen and (min-width:832px) {
+    #behindScence p{
+        padding: 25px;
+        font-size: 1.2em;
+    }
+}
+
+
+/* --------------------------------------------------- */
+/*                Quot section styling                 */
+/* ----------------------------------------------------*/
+section#quot {
+    height: 350px;
+    background: url(../img/quoter.png) no-repeat right bottom, url(../img/quotBck.jpg) repeat center center fixed;
+    background-size: 29%, cover;
+    padding: 25px;
+    border-top: 10px solid white;
+    border-bottom: 10px solid white;
+    -webkit-box-shadow: 0 0px 10px #a9a7a7;
+    -moz-box-shadow: 0 0px 10px #a9a7a7;
+    box-shadow: 0 0px 15px #a9a7a7;
+}
+
+#quot h2{
+    font-family: 'garamond', serif;
+    font-weight: bold;
+    font-size: 4em;
+    text-align: right;
+    padding: 13% 30% 0px 0;
+    color: #0a8a03;
+}
+
+#quot h2:before, #quot h2:after {
+    content: '"';
+}
+
+@media only screen and (max-width:680px){
+    section#quot {
+        height: 300px;
+        background-size: 40%, cover;
+    }
+    
+    #quot h2{
+        font-size: 3.3em;
+        text-align: center;
+        padding-top: 5%;
+    }
+}
+
+
+/* --------------------------------------------------- */
+/*                Work section styling                 */
+/* ----------------------------------------------------*/
+section#work {
+    margin-top: 10px;
+    background: #85c87e;
+    padding-bottom: 25px;
+}
+
+#work h1{
+    text-align: center;
+    color: #eee;
+    font-size: 3em;
+    margin: 35px 0;
+}
+
+#work div.row {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.workbox {
+    position: relative;
+}
+
+.workbox div.boxWrap {
+    width: auto;
+    height: auto;
+}
+
+.workbox .boxWrap>h4 {
+    font-family: 'icofont';
+    font-size: 1.5em;
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    background: rgba(71, 199, 71, 0.77);
+    box-shadow: 0px 1px 10px #008000;
+    -webkit-box-shadow: 0px 1px 10px #008000;
+    -moz-box-shadow: 0px 1px 10px #008000;
+    -ms-box-shadow: 0px 1px 10px #008000;
+    -o-box-shadow: 0px 1px 10px #008000;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0;
+    z-index: 100;
+    transition: 0.3s opacity ease-in;
+    -webkit-transition: 0.3s opacity ease-in;
+    -moz-transition: 0.3s opacity ease-in;
+    -ms-transition: 0.3s opacity ease-in;
+    -o-transition: 0.3s opacity ease-in;
+}
+
+.workbox .boxWrap>h4 a{
+    color: white;
+    display: block;
+    padding: 20px;
+}
+
+.workbox .boxWrap img { 
+    transition: 0.4s filter ease-in;
+    -webkit-transition: 0.4s filter ease-in;
+    -moz-transition: 0.4s filter ease-in;
+    -ms-transition: 0.4s filter ease-in;
+    -o-transition: 0.4s filter ease-in;
+}
+
+/* hover effect */
+.boxWrap:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -ms-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.boxWrap:hover img{
+    filter: saturate(200%);
+    -webkit-filter: saturate(200%);
+    -moz-filter: saturate(200%);
+    -o-filter: saturate(200%);
+    -ms-filter: saturate(200%);
+}
+.boxWrap:hover h4{
+    opacity: 1;
+}
+
+.workbox div.caption{
+    background: #eee;
+    text-align: center;
+    margin-bottom: 30px;
+    min-height: 80px;
+}
+
+div.caption h4{
+    margin: 0;
+    font-family: 'Rubik One', sans-serif;
+    font-weight: 100;
+    padding: 6px 0px;
+    color: #164f04;
+}
+
+div.caption p{
+    padding: 0 0 5px 0;
+    font-size: 1.1em;
+}
+
+/* --------------------------------------------------- */
+/*                Contacts section styling             */
+/* ----------------------------------------------------*/
+section#connect {
+    background: #5e5e5e;
+    padding: 75px 25px 5px 25px;
+    background: #5e5e5e; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#5e5e5e, #1e1e1e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#5e5e5e, #1e1e1e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#5e5e5e, #1e1e1e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#5e5e5e, #1e1e1e); /* Standard syntax */
+}
+
+#connect h1{
+    margin: 0;
+    text-align: center;
+    color: #fff;
+}
+
+#connect p{
+    padding: 5px;
+    text-align: center;
+    color: #ddd;
+}
+
+#social {
+    margin: 0 auto;
+    margin-top: 65px;
+}
+#social ul{
+    width: 90%;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+
+#social ul li{
+    display: inline-block;
+    margin: 0 9px 0px 0;
+}
+
+#social ul li a{
+    font-family: 'icofont';
+    font-size: 1.3em;
+    background: #eee;
+    padding: 15px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+#social ul li p{
+    background: #eee;
+    color: #23527c;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-bottom: 25px;
+    padding: 25px 10px;
+    overflow: hidden;
+}
+
+/* hover effect */
+#social ul li a:hover{
+    text-decoration: none;
+}
+
+#social ul li a:hover + p{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -ms-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -o-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* notice part */
+#connect #notice{
+    text-align: center;
+    color: #000;
+    margin-top: 85px;
+    margin-bottom: -5px;
+}
+
+#connect #notice div h4{
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Sorce code pro', monospace;
+    font-size: 1.2em;
+    text-align: justify;
+    text-transform: uppercase;
+    color: #545454;
+    margin-bottom: 55px;
+}
+#notice div p{
+    color: #5e5e5e;
+    margin-top: 7px;
+}
+
+
+/* laoder image */
+div#loaderWrap {
+    height: 100%;
+    width: 100%;
+    background: url(../img/loader.gif) no-repeat center center;
+    background-size: cover;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9999;
+}
+
+.no-js #loaderWrap {
+    display: none;
+}
+
+/* ----------------------------------------------------*/
+/*               Float nav css                         */
+/*-----------------------------------------------------*/
+
+#floatNav{
+    position: fixed;
+    width: auto;
+    height: auto;
+    bottom: 5px;
+    right: -55px;
+    z-index: 9999;
+    transition: right 0.3s ease-in;
+    -webkit-transition: right 0.3s ease-in;
+    -moz-transition: right 0.3s ease-in;
+    -o-transition: right 0.3s ease-in;
+    -ms-transition: right 0.3s ease-in;
+}
+
+#floatNav a{
+    display: block;
+    font-family: 'Icofont';
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    color: #ff8c00;
+    background: rgba(255,255,255,0.3);
+    padding: 3px 15px 3px 17px;
+    border-radius: 6px 0 0px 6px;
+    -webkit-border-radius: 6px 0 0px 6px;
+    -moz-border-radius: 6px 0 0px 6px;
+    -ms-border-radius: 6px 0 0px 6px;
+    -o-border-radius: 6px 0 0px 6px;
+    box-shadow: 0px 0px 5px #2b2b2b;
+    -webkit-box-shadow: 0px 0px 5px #2b2b2b;
+    -moz-box-shadow: 0px 0px 5px #2b2b2b;
+    -ms-box-shadow: 0px 0px 5px #2b2b2b;
+    -o-box-shadow: 0px 0px 5px #2b2b2b;
+}
+
+
+#floatNav a:hover {
+    color:#de4444;
+    background: rgba(255,255,255,0.5);
+}
